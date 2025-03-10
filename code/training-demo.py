@@ -4,7 +4,7 @@ from PIL import Image
 import os
 
 recognizer = cv2.face.LBPHFaceRecognizer_create()
-path= "datasets"
+path = "datasets" 
 
 def getImageID(path):
     imagePath = [os.path.join(path, f) for f in os.listdir(path)]
