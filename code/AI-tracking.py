@@ -23,7 +23,7 @@ recognized_timer = {}
 
 def doorAutomate(val):
     if val == 0:
-        arduino.write(b"OPEN\n") # response to face recognized
+        arduino.write(b"OPEN\n") # you can implement a response if a face is recognized for example
     elif val == 1:
         arduino.write(b"CLOSE\n")
 
@@ -67,7 +67,7 @@ while True:
         detected_faces.add(serial)
         name = name_list[serial]
 
-        if serial in permanent_faces:  # Track permanent faces
+        if serial in permanent_faces:
             permanentTracking(name, x, y, w, h)
             face_timer[serial] = time.time()
 
@@ -111,7 +111,7 @@ while True:
             if time.time() - face_timer[serial] > 1:  # 1 second of no detection means the person is most likely gone
                 del permanent_faces[serial]
                 del face_timer[serial]  # Remove the timer as well
-                count = 0
+                # count = 0
                 print(f"Removed {name_list[serial]} from permanent faces due to inactivity.")
     
     for serial in list(permanent_hostile.keys()):
@@ -119,7 +119,7 @@ while True:
             if time.time() - hostile_timer[serial] > 1:  # 1 second of no detection
                 del permanent_hostile[serial]
                 del hostile_timer[serial]  # Remove the timer as well
-                count2 = 0
+                # count2 = 0
                 print(f"Removed hostile from permanent hostile due to inactivity.")
 
     frame = cv2.resize(frame, (640, 480))
