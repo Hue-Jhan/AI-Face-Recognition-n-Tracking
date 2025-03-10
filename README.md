@@ -26,7 +26,7 @@ The AI works like this:
 
 - The face will then be tracked until it disappears for over 1 second (and gets removed from the list), this is done because the algorithm isnt perfect and sometimes for a split second it wont recognize the face, this is due to a slight change in lighting, position, or whatever, therefore if a face isnt recognize for a short moment, for example if the user turns around, the tracking wont be lost and wont have to restart again.
 
-- If the confidence is below a certain level, the face will simply be named "Unknown", if a face is unknown for over 2.5 seconds it's most likely that the person is an intruder, therefore the face is added to a ```permanent hostile``` list and will receive a heavy punishment. The system will start a precise head tracking and fetch the exact coordinates of the face. You can do whatever you want with those coordinates, such as a defense system which will """send""" flying """objects""" towards that person.
+- If the confidence is below a certain level, the face will simply be named "Unknown", if a face is unknown for over 2.5 seconds it's most likely that the person is an intruder, therefore the face is added to a ```permanent hostile``` list and will receive a heavy punishment. The system will start a sniper-like precise head tracking and fetch the exact coordinates of the face. You can do whatever you want with those coordinates, such as a defense system which will """send""" flying """objects""" towards that intruder.
 
 - The hostile face is lost after 1 second of no detection, meaning the intruder is probably gone.
 
