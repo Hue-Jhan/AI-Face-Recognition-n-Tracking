@@ -2,9 +2,9 @@ import cv2
 import time
 import serial 
 
-PORT = "COM3"
-baud_rate = 57600
-arduino = serial.Serial(PORT, baud_rate)
+# PORT = "COM3"   these 3 lines are used to connect to arduino, you can then implement sensor n stuff to do whatever you want when a user or an intruder is recognized : ) 
+# baud_rate = 57600
+# arduino = serial.Serial(PORT, baud_rate)
 video = cv2.VideoCapture(0)
 cascade_path = "models/haarcascade_frontalface_default.xml"
 facedetect = cv2.CascadeClassifier(cascade_path)
@@ -12,8 +12,8 @@ recognizer = cv2.face.LBPHFaceRecognizer_create()
 recognizer.read("models/Trainer.yml")
 imgBackground = cv2.imread("models/background.png") 
 name_list = ["", " User1", " User2"]
-count = 0
-count2 = 0
+# count = 0
+# count2 = 0
 permanent_faces = {}
 permanent_hostile = {}
 hostile_timer = {}
@@ -125,7 +125,7 @@ while True:
     frame = cv2.resize(frame, (640, 480))
     imgBackground[162:162 + 480, 55:55 + 640] = frame # stolen from an indian guy xd
     cv2.imshow("Frame", imgBackground)
-    key = cv2.waitKey(1)
+    key = cv2.waitKey(1) # quit by pressing "q", you can implement any function with arduino, for example if a certain user is recognized and u press "x", a door opens
     if key == ord("q"):
         break
 
