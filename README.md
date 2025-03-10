@@ -16,7 +16,6 @@ The actual code is more complex.
 Every second the camera will take various pictures and send them to the system, which will try to detect faces from them. If a face is associated to a user, it keeps getting tracked until it disappears for 1 second (will explain later why), if a face is unknown for over 2.5 seconds, then it's recognized as a hostile face, and a slighly different kind of tracking will begin, this one takes the face coordinates for nefarious purposes... 😈
 
 
-
 # 🤖 AI 
 
 The AI works like this: 
