@@ -3,6 +3,8 @@ Face recognition for a Arduino Defense System, includes a hostile face tracking 
 
 # 💻Code 
 
+<img align="right" src="media/userfootage.gif" width="450" />
+
 The code detects and trains on faces using a locally stored "binary pattern histogram" model called Haarscade, made by a German professor. This algorithm recognizes patterns in grey-scale images (taken previously) to detect faces, and the rest of the code starts tracking them. It also detects hostile faces if they are not associated with a pre-made user, and starts pointing at them in an ominous way :O 
 
 ### 1) Data Collect
@@ -17,6 +19,9 @@ Every second the camera will take various pictures and send them to the system, 
 
 
 # 🤖 AI 
+
+
+<img align="right" src="media/targetfootage.gif" width="450" />
 
 The AI works like this: 
 
