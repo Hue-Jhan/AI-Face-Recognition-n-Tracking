@@ -21,7 +21,7 @@ Every second the camera will take various pictures and send them to the system, 
 # 🤖 AI 
 
 
-<img align="right" src="media/targetfootage.gif" width="450" />
+<img align="right" src="media/targetfootage.gif" width="440" />
 
 The AI works like this: 
 
