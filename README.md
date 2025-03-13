@@ -9,13 +9,13 @@ The code detects and trains on faces using a locally stored "binary pattern hist
 
 In the example on the right i searched a random guy on google and started ```data_collect``` with his face displayed on my phone. Don't ask questions on this guy's name.  
 
-##### 1) Data Collect
+##### - Data Collect
 The first code takes 500 pics and inserts them into the datasets folder, they are associated to a specific user. It detects the faces using the haarscade model after putting the pics in a grey-scale form.
 
-##### 2) Training Demo
+##### - Training Demo
 The second code trains on the previously taken images, more precisely it opens all the previously taken pictures, and for every id (user) it tries to fetch the face unique patterns and stores them into a ```Trainer.yml``` file.
 
-##### 3) Tracking
+##### - Tracking
 The actual code is more complex.
 Every second the camera will take various pictures and send them to the system, which will try to detect faces from them using the patterns saved in the Trainer.yml file. If a face is associated to a user, it keeps getting tracked until it disappears for 1 second (will explain later why), if a face remains unknown for over 2.5 seconds, then it's recognized as a hostile face, and a slighly different kind of tracking will begin, this one takes the face coordinates for nefarious purposes... 😈
 
