@@ -17,7 +17,7 @@ The second code trains on the previously taken images, more precisely it opens a
 
 ##### - Tracking
 The actual code is more complex.
-Every second the camera will take various pictures and send them to the system, which will try to detect faces from them using the patterns saved in the Trainer.yml file. If a face is associated to a user, it keeps getting tracked until it disappears for 1 second (will explain later why), if a face remains unknown for over 2.5 seconds, then it's recognized as a hostile face, and a slighly different kind of tracking will begin, this one takes the face coordinates for nefarious purposes... 😈
+Every second the camera will take various pictures and send them to the system, which will try to detect faces from them using the patterns saved in the Trainer.yml file. If a face is associated to a user, it keeps getting tracked until it disappears for 1 second (will explain later why), if a face remains unknown for over 2.5 seconds, then it's recognized as a hostile face, and a slighly different kind of tracking will begin, this one takes the face coordinates for nefarious purposes... 😈 The face is detected through cv2 library and displayed on a custom image. 
 
 
 # 🤖 Machine Learning
