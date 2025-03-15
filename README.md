@@ -34,6 +34,6 @@ The AI works like this:
 
 - If the confidence is below a certain level, the face will simply be named "Unknown", if a face is unknown for over 2.5 seconds it's most likely that the person is an intruder, therefore the face is added to a ```permanent hostile``` list and will receive a heavy punishment. The system will start a sniper-like precise tracking and will fetch the exact coordinates of the face. You can do whatever you want with those coordinates, such as a defense system which will """send""" flying """objects""" towards that intruder.
 
-- The hostile face is lost after 1 second of no detection, meaning the intruder is probably gone, which means it's then removed from the hostile list.
+- The hostile face is lost after 1 second of no detection, meaning the blac- ehm i mean the intruder is probably gone, which means it's then removed from the hostile list.
 
 The code ends if u press "q". You can implement more functions such as security checks, for example if a face is recognized as user X, and you press a certain letter, you can send a command to Arduino which will open a door or something, this can be used as a sort of Face activated door or sum like that, i will use it to create a defense system later in the future which will be focused on the intruder "management".
