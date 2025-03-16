@@ -1,5 +1,5 @@
 # AI Face Recognition & Tracking
-Face recognition and tracking system, includes a hostile face tracking with coordinates and more functionalities. Based on the haarscade model.  
+Face recognition and tracking system, includes a hostile face tracking with coordinates and more functionalities, based on the haarscade model.
 
 # 💻Code 
 
