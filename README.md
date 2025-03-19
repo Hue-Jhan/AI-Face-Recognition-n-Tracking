@@ -10,7 +10,7 @@ The code detects and trains on faces using a locally stored "binary pattern hist
 In the example on the right i searched a random guy on google and started ```data_collect``` with his face displayed on my phone. Don't ask questions on this guy's name.  
 
 ##### - Data Collect
-The first code takes 500 pics and inserts them into the datasets folder, they are associated to a specific user. It detects the faces using the haarscade model after putting the pics in a grey-scale form.
+The first code takes 500 pics and inserts them into the datasets folder, they are associated to a specific user. It detects the faces using the haarscade model after putting the pics in a grey-scale format.
 
 ##### - Training Demo
 The second code trains on the previously taken images, more precisely it opens all the previously taken pictures, and for every id (user) it tries to fetch the face unique patterns and stores them into a ```Trainer.yml``` file.
