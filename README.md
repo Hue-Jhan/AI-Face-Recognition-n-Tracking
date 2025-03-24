@@ -28,7 +28,7 @@ The AI works like this:
 
 - Every second the camera takes various pictures, if a face is found, the system will then check if the patterns of the face match the ones of any of the known users (located in Trainer.yml file), this "predictment" has a confidence level which tells us how likely a face is an actual known user's face.
 
-- If the confidence level is above a certain level (it is reccomended to raise this level only after training lots of images) then a timer will start, if the confidence remains high for 2.5 seconds straight (without a single failure) then the system will add that face to a ```permanent faces``` list and won't try to recognize it anymore as it highly likely that the person matches the associated user. 
+- If the confidence level is above a certain level (it is reccomended to raise this level only after training lots of images, default is set to 55 but raise it if the faces are far away from the camera, as the model is not precise at longer distances) then a timer will start, if the confidence remains high for 2.5 seconds straight (without a single failure) then the system will add that face to a ```permanent faces``` list and won't try to recognize it anymore as it highly likely that the person matches the associated user. 
 
 - The face will then be tracked until it disappears for over 1 second (and gets removed from the list), this is done because the algorithm isnt perfect and sometimes for a split second it wont recognize the face, this is due to a slight change in lighting, position, or whatever, therefore if a face isnt recognized for a short moment, for example if the user turns around, the tracking wont be lost and wont have to restart again.
 
